@@ -30,7 +30,7 @@ def hw02_2(pdf):
             r"第\s+[一二三四五六七八九十]+\s+章",
             r"第\s+[\d-]+\s+條"
         ],
-        chunk_size=0,
+        chunk_size=50,
         chunk_overlap=0,
         is_separator_regex = True)
     chunks_by_pages_recursive = recursive_splitter.split_text(document_text)
