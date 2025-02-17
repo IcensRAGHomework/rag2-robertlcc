@@ -18,7 +18,7 @@ def hw02_1(pdf):
 
 def hw02_2(pdf):
     # Load the PDF file
-    pdf_loader = PyPDFLoader(file_path=pdf)
+    pdf_loader = PyPDFLoader(pdf)
     documents = pdf_loader.load()
 
     # Combine the document text into a single string
