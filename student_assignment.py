@@ -53,3 +53,6 @@ def hw02_2(pdf):
     chunks_by_pages_recursive = recursive_splitter.split_text(document_text)
 
     return len(chunks_by_pages_recursive)
+
+#print(hw02_1(q1_pdf))
+#print(hw02_2(q2_pdf))
