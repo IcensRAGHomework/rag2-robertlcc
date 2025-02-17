@@ -36,23 +36,3 @@ def hw02_2(pdf):
     chunks_by_pages_recursive = recursive_splitter.split_text(document_text)
 
     return len(chunks_by_pages_recursive)
-    documents = pdf_loader.load()
-
-    # Combine the document text into a single string
-    document_text = "\n".join([doc.page_content for doc in documents])
-
-    # Use RecursiveCharacterTextSplitter to split the document by pages
-    recursive_splitter = RecursiveCharacterTextSplitter(
-        separators=[
-            r"第\s+[一二三四五六七八九十]+\s+章",
-            r"第\s+[0-9]+(?:-[0-9]+)?\s+條"
-        ],
-        chunk_size=0,
-        chunk_overlap=0,
-        is_separator_regex = True)
-    chunks_by_pages_recursive = recursive_splitter.split_text(document_text)
-
-    return len(chunks_by_pages_recursive)
-
-#print(hw02_1(q1_pdf))
-#print(hw02_2(q2_pdf))
